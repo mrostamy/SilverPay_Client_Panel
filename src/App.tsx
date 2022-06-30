@@ -1,8 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import { LoginForm } from './components/auth/login/login';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Register } from './components/auth/register/register';
+import React, { Suspense, useEffect, useState } from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import { Test3 } from './components/test';
+
+//css
+import 'react-toastify/dist/ReactToastify.css';
+import './assets/css/adminlte.min.css';
+import './assets/css/custom-style.css';
+import './assets/css/bootstrap-rtl.min.css';
+
+//js
+import * as $ from 'jquery'
+export function AddLibrary(urlOfTheLibrary: any) {
+  const script = document.createElement('script');
+  script.src = urlOfTheLibrary;
+  script.type = "text/script"
+  document.body.appendChild(script);
+}
+
+
+
+
+const Login = React.lazy(() => import('./components/auth/login/login'));
+
+const Register = React.lazy(() => import('./components/auth/register/register'));
+
+const Panel = React.lazy(() => import('./components/panel/panel'));
+
+
+
 
 function App() {
 
@@ -16,16 +42,27 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/auth'>
-          <Route index   element={<LoginForm />} />
-          <Route path='login' element={<LoginForm />} />
-          <Route path='register' element={<Register />} />
-        </Route>
-        <Route path='/' element={<LoginForm />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+
+      <BrowserRouter>
+        <ToastContainer />
+        <Suspense fallback={<div>loadin...</div>}>
+          <Routes>
+            <Route path='/' element={<Navigate to="/panel" />} />
+            <Route path='/test' element={<Test3 />} />
+            <Route path='panel/*' element={<Panel />} />
+            <Route path='/auth'>
+              <Route index element={<Navigate to={"/auth/login"} />} />
+              <Route path='login' element={<Login />} />
+              <Route path='register' element={<Register />} />
+            </Route>
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+
+
+    </>
+
   );
 }
 
