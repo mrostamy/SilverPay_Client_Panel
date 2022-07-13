@@ -1,34 +1,44 @@
+import { injectable } from "inversify";
 import { isExpired, useJwt } from "react-jwt";
 import axios from "./http_service";
 
-const base_url = "http://localhost:8080/api/site/panel/auth/";
+
+@injectable()
+export class AuthService {
+
+
+    base_url = process.env.REACT_APP_API_URL + "site/panel/auth/";
 
 
 
-export const login = (model: any): Promise<any> => {
+    login = (model: any): Promise<any> => {
 
 
-    return axios.post(base_url + 'login', model)
+        return axios.post(this.base_url + 'login', model)
 
-}
+    }
 
-export const logout = (): Boolean => {
+    logout = (): Boolean => {
 
-    localStorage.removeItem("token")
-    return true
+        localStorage.removeItem("token")
+        return true
 
-}
+    }
 
-export const register = (values: any): Promise<any> => {
+    register = (values: any): Promise<any> => {
 
-    return axios.post(base_url + "register", values);
+        return axios.post(this.base_url + "register", values);
 
-}
+    }
 
-export const IsLogin = (): boolean => {
+    IsLogin = (): boolean => {
 
-    const token: string = localStorage.getItem("token") || ""
-    console.log("token: " + !isExpired(token))
-    return !isExpired(token)
+        const token: string = localStorage.getItem("token") || ""
+        console.log("token: " + !isExpired(token))
+        return !isExpired(token)
+
+    }
+
+
 
 }

@@ -6,7 +6,7 @@ import "../../../assets/css/login/blue.css";
 // import "../../../assets/css/login/custom-style.css";
 
 import { Field, Form, Formik, useFormik } from "formik";
-import { login } from "../../../services/auth_service";
+import { AuthService } from "../../../services/auth_service";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -15,9 +15,11 @@ const Login = () => {
 
     const nav = useNavigate()
 
+    const auth_service=new AuthService();
+
     const handleSubmit = (values: any) => {
 
-        login(values).then(resp => {
+        auth_service.login(values).then(resp => {
             console.log(resp.data)
             localStorage.setItem("token", resp.data)
             nav("/")

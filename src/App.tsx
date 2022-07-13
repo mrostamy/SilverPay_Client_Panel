@@ -1,3 +1,7 @@
+import "reflect-metadata";
+import { Provider } from './ioc.react';
+import { container} from './ioc';
+
 import React, { Suspense, useEffect, useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -10,7 +14,6 @@ import './assets/css/custom-style.css';
 import './assets/css/bootstrap-rtl.min.css';
 
 //js
-import * as $ from 'jquery'
 export function AddLibrary(urlOfTheLibrary: any) {
   const script = document.createElement('script');
   script.src = urlOfTheLibrary;
@@ -37,29 +40,32 @@ function App() {
 
   useEffect(() => {
 
-    document.body.className = 'login-page';
+
+    $.getScript('./src/assets/js/bootstrap.bundle.min.js');
+
+
+
   }, [])
 
 
   return (
     <>
 
-      <BrowserRouter>
-        <ToastContainer />
-        <Suspense fallback={<div>loadin...</div>}>
-          <Routes>
-            <Route path='/' element={<Navigate to="/panel" />} />
-            <Route path='/test' element={<Test3 />} />
-            <Route path='panel/*' element={<Panel />} />
-            <Route path='/auth'>
-              <Route index element={<Navigate to={"/auth/login"} />} />
-              <Route path='login' element={<Login />} />
-              <Route path='register' element={<Register />} />
-            </Route>
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-
+      <Provider container={container}>
+          <ToastContainer />
+          <Suspense fallback={<div>loadin...</div>}>
+            <Routes>
+              <Route path='/' element={<Navigate to="/panel" />} />
+              <Route path='/test' element={<Test3 />} />
+              <Route path='/panel/*' element={<Panel />} />
+              <Route path='/auth'>
+                <Route index element={<Navigate to={"/auth/login"} />} />
+                <Route path='login' element={<Login />} />
+                <Route path='register' element={<Register />} />
+              </Route>
+            </Routes>
+          </Suspense>
+      </Provider>
 
     </>
 
