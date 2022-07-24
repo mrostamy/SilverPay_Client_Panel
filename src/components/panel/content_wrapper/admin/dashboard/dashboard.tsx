@@ -1,15 +1,16 @@
 import { decodeToken } from "react-jwt";
 import { useNavigate } from "react-router-dom"
 import { toast } from "react-toastify";
-import { AuthService } from "../../../../../services/auth_service";
+import { AuthService } from "../../../../../services/auth/auth_service";
+import BankCard from "../bankCard/bankCard";
 
 const Dashboard = () => {
 
     const nav = useNavigate();
 
-    const authService=new AuthService();
+    const authService = new AuthService();
 
-    const myDecodedToken=decodeToken<any>(localStorage.getItem("token") || "") 
+    const myDecodedToken = decodeToken<any>(localStorage.getItem("token") || "")
 
     const logoutHandler = () => {
 
@@ -22,9 +23,12 @@ const Dashboard = () => {
     return (
         <>
             <h1>Dashbord</h1>
-            {authService.IsLogin() ? <p>user is logged in</p> : null}
-            {myDecodedToken ? <p>{myDecodedToken.sub}</p>:null}
+            {authService.isLogin() ? <p>user is logged in</p> : null}
+            {myDecodedToken ? <p>{myDecodedToken.sub}</p> : null}
             <button onClick={logoutHandler}>logout</button>
+
+            <BankCard />
+
         </>
     )
 }

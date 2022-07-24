@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../../../assets/images/AdminLTELogo.png'
 
 export const MainSideBar = () => {
@@ -49,7 +50,33 @@ export const MainSideBar = () => {
                                 </p>
                             </a>
                         </li>
-                
+                        {/* //#region admin */}
+                        <li className="nav-item has-treeview menu-open">
+                            <a href="#" className="nav-link ">
+                                <i className="nav-icon fa fa-info" />
+                                <p>
+                                    کاربران
+                                    <i className="right fa fa-angle-left" />
+                                </p>
+                            </a>
+                            <ul className="nav nav-treeview">
+                                <li className="nav-item">
+                                    <Link to={"/panel/users/usersmanagement"} className="nav-link ">
+                                        <i className="nav-icon fa fa-user" />
+                                        <p>مدریت کاربران</p>
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="#" className="nav-link">
+                                        <i className="nav-icon fa fa-book" />
+                                        <p>مدارک</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        {/* //#endregion */}
+
+                        //#region user
                         <li className="nav-item has-treeview menu-open">
                             <a href="#" className="nav-link ">
                                 <i className="nav-icon fa fa-info" />
@@ -67,12 +94,25 @@ export const MainSideBar = () => {
                                 </li>
                                 <li className="nav-item">
                                     <a href="#" className="nav-link">
-                                    <i className="nav-icon fa fa-book" />
+                                        <i className="nav-icon fa fa-book" />
                                         <p>مدارک</p>
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="#" className="nav-link">
+                                        <i className="nav-icon fa fa-book" />
+                                        <p>تنظیمات اطلاع رسانی</p>
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="#" className="nav-link">
+                                        <i className="nav-icon fa fa-book" />
+                                        <p>کارت های بانکی</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
+                        //#endregion
                         <li className="nav-item">
                             <a href="#" className="nav-link">
                                 <i className="nav-icon fa fa-user" />

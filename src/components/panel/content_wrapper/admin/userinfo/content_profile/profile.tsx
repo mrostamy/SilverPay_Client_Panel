@@ -1,15 +1,15 @@
 import { useInjection } from '../../../../../../ioc.react';
-import { UserService } from "../../../../../../services/user_service";
+import { UserService } from "../../../../../../services/panel/user/user_service";
 import User from "../../../../../../models/User";
 import { AlertService } from '../../../../../../services/alert_service';
-import { AuthService } from '../../../../../../services/auth_service';
+import { AuthService } from '../../../../../../services/auth/auth_service';
 import { toast } from 'react-toastify';
 import { decodeToken } from 'react-jwt';
 import ResetPassword from './components/resetPassword/reset_password';
 import EditInfo from './components/editInfo/edit_info';
 import BankCard from './components/bankCard/bank_card';
 import ChangePic from './components/changePic/change_pic';
-
+import { createTheme } from '@mui/material/styles';
 
 
 const ContentProfile = () => {
@@ -21,7 +21,7 @@ const ContentProfile = () => {
 
     let passModel: any = {};
 
-   
+
 
     const initialValues: User = {
         id: "",
@@ -169,5 +169,10 @@ const ContentProfile = () => {
 
     )
 }
+
+const theme = createTheme({
+
+    direction: "rtl"
+})
 
 export default ContentProfile;

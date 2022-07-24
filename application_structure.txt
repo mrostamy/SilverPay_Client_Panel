@@ -1,0 +1,251 @@
+C:\Users\Mohammad\SilverPay\silverpay-panel
+├── build
+|  ├── asset-manifest.json
+|  ├── assets
+|  |  ├── css
+|  |  |  ├── adminlte.min.css
+|  |  |  ├── bootstrap-rtl.min.css
+|  |  |  └── custom-style.css
+|  |  ├── fonts
+|  |  |  ├── fontawesome-webfont.eot
+|  |  |  ├── fontawesome-webfont.svg
+|  |  |  ├── fontawesome-webfont.ttf
+|  |  |  ├── fontawesome-webfont.woff
+|  |  |  ├── fontawesome-webfont.woff2
+|  |  |  ├── FontAwesome.otf
+|  |  |  ├── Vazir-Black.eot
+|  |  |  ├── Vazir-Black.ttf
+|  |  |  ├── Vazir-Black.woff
+|  |  |  ├── Vazir-Black.woff2
+|  |  |  ├── Vazir-Bold.eot
+|  |  |  ├── Vazir-Bold.ttf
+|  |  |  ├── Vazir-Bold.woff
+|  |  |  ├── Vazir-Bold.woff2
+|  |  |  ├── Vazir-Light.eot
+|  |  |  ├── Vazir-Light.ttf
+|  |  |  ├── Vazir-Light.woff
+|  |  |  ├── Vazir-Light.woff2
+|  |  |  ├── Vazir-Medium.eot
+|  |  |  ├── Vazir-Medium.ttf
+|  |  |  ├── Vazir-Medium.woff
+|  |  |  ├── Vazir-Medium.woff2
+|  |  |  ├── Vazir-Thin.eot
+|  |  |  ├── Vazir-Thin.ttf
+|  |  |  ├── Vazir-Thin.woff
+|  |  |  ├── Vazir-Thin.woff2
+|  |  |  ├── Vazir.eot
+|  |  |  ├── Vazir.ttf
+|  |  |  ├── Vazir.woff
+|  |  |  └── Vazir.woff2
+|  |  └── js
+|  |     ├── bootstrap.bundle.min.js
+|  |     ├── demo.js
+|  |     ├── fastclick.min.js
+|  |     └── jquery-3.6.0.js
+|  ├── favicon.ico
+|  ├── index.html
+|  ├── logo192.png
+|  ├── logo512.png
+|  ├── manifest.json
+|  ├── robots.txt
+|  ├── service-worker.js
+|  ├── service-worker.js.LICENSE.txt
+|  ├── service-worker.js.map
+|  └── static
+|     ├── css
+|     |  ├── 241.b80262f2.chunk.css
+|     |  ├── 241.b80262f2.chunk.css.map
+|     |  ├── main.a9236be6.css
+|     |  └── main.a9236be6.css.map
+|     ├── js
+|     |  ├── 241.863181b5.chunk.js
+|     |  ├── 241.863181b5.chunk.js.map
+|     |  ├── 448.0717028b.chunk.js
+|     |  ├── 448.0717028b.chunk.js.map
+|     |  ├── 477.6782229d.chunk.js
+|     |  ├── 477.6782229d.chunk.js.map
+|     |  ├── 705.727b1444.chunk.js
+|     |  ├── 705.727b1444.chunk.js.LICENSE.txt
+|     |  ├── 705.727b1444.chunk.js.map
+|     |  ├── 787.59492815.chunk.js
+|     |  ├── 787.59492815.chunk.js.map
+|     |  ├── 84.430ab657.chunk.js
+|     |  ├── 84.430ab657.chunk.js.map
+|     |  ├── main.45202170.js
+|     |  ├── main.45202170.js.LICENSE.txt
+|     |  └── main.45202170.js.map
+|     └── media
+|        ├── AdminLTELogo.dc3925d09dcdabe76306.png
+|        ├── Vazir-Black.0bbd080ff955d584373f.woff
+|        ├── Vazir-Black.18bc4ee7ec15c060c871.ttf
+|        ├── Vazir-Black.1a73cdb907a40c5c61f8.eot
+|        ├── Vazir-Black.9aa8433af81dbd4c56b5.woff2
+|        ├── Vazir-Bold.1ec582b91fa8d13dd718.ttf
+|        ├── Vazir-Bold.3305d4003bd27a10827b.woff
+|        ├── Vazir-Bold.ded93117fa76f99d882e.eot
+|        ├── Vazir-Bold.e17e5d28e9cb0a65c55d.woff2
+|        ├── Vazir-Light.04e1640231988684a93b.woff2
+|        ├── Vazir-Light.06e0fe52d08623f11150.eot
+|        ├── Vazir-Light.9eec7bb9ce6b32f0da6d.woff
+|        ├── Vazir-Light.dac59184b319f21c58c7.ttf
+|        ├── Vazir-Medium.43e6c88cadb895e831b2.eot
+|        ├── Vazir-Medium.4fcac6160bf7dd8fdac0.woff
+|        ├── Vazir-Medium.82c1133e14b3fb15466f.ttf
+|        ├── Vazir-Medium.b183872718018f71ceff.woff2
+|        ├── Vazir-Thin.3fc2bef741e8da043f33.eot
+|        ├── Vazir-Thin.7882bfe59ed0331bfc04.woff
+|        ├── Vazir-Thin.7b6e821c507cd9379089.woff2
+|        ├── Vazir-Thin.e3f8d0d5d88398864b3f.ttf
+|        ├── Vazir.86fc40c3d5016badb590.ttf
+|        ├── Vazir.9b82bf46c4f3717b2016.woff
+|        ├── Vazir.c9f007a48cb77ab67c24.woff2
+|        └── Vazir.e16b14e500b2f4e6c541.eot
+├── package-lock.json
+├── package.json
+├── public
+|  ├── assets
+|  |  ├── css
+|  |  |  ├── adminlte.min.css
+|  |  |  ├── bootstrap-rtl.min.css
+|  |  |  └── custom-style.css
+|  |  ├── fonts
+|  |  |  ├── fontawesome-webfont.eot
+|  |  |  ├── fontawesome-webfont.svg
+|  |  |  ├── fontawesome-webfont.ttf
+|  |  |  ├── fontawesome-webfont.woff
+|  |  |  ├── fontawesome-webfont.woff2
+|  |  |  ├── FontAwesome.otf
+|  |  |  ├── Vazir-Black.eot
+|  |  |  ├── Vazir-Black.ttf
+|  |  |  ├── Vazir-Black.woff
+|  |  |  ├── Vazir-Black.woff2
+|  |  |  ├── Vazir-Bold.eot
+|  |  |  ├── Vazir-Bold.ttf
+|  |  |  ├── Vazir-Bold.woff
+|  |  |  ├── Vazir-Bold.woff2
+|  |  |  ├── Vazir-Light.eot
+|  |  |  ├── Vazir-Light.ttf
+|  |  |  ├── Vazir-Light.woff
+|  |  |  ├── Vazir-Light.woff2
+|  |  |  ├── Vazir-Medium.eot
+|  |  |  ├── Vazir-Medium.ttf
+|  |  |  ├── Vazir-Medium.woff
+|  |  |  ├── Vazir-Medium.woff2
+|  |  |  ├── Vazir-Thin.eot
+|  |  |  ├── Vazir-Thin.ttf
+|  |  |  ├── Vazir-Thin.woff
+|  |  |  ├── Vazir-Thin.woff2
+|  |  |  ├── Vazir.eot
+|  |  |  ├── Vazir.ttf
+|  |  |  ├── Vazir.woff
+|  |  |  └── Vazir.woff2
+|  |  └── js
+|  |     ├── bootstrap.bundle.min.js
+|  |     ├── demo.js
+|  |     ├── fastclick.min.js
+|  |     └── jquery-3.6.0.js
+|  ├── favicon.ico
+|  ├── index.html
+|  ├── logo192.png
+|  ├── logo512.png
+|  ├── manifest.json
+|  └── robots.txt
+├── src
+|  ├── App.test.tsx
+|  ├── App.tsx
+|  ├── assets
+|  |  ├── css
+|  |  |  ├── adminlte.min.css
+|  |  |  ├── bootstrap-rtl.min.css
+|  |  |  ├── custom-style.css
+|  |  |  ├── font-awesome.min.css
+|  |  |  ├── googleapis.css
+|  |  |  ├── ionicons.min.css
+|  |  |  └── login
+|  |  ├── fonts
+|  |  |  ├── fontawesome-webfont.eot
+|  |  |  ├── fontawesome-webfont.svg
+|  |  |  ├── fontawesome-webfont.ttf
+|  |  |  ├── fontawesome-webfont.woff
+|  |  |  ├── fontawesome-webfont.woff2
+|  |  |  ├── FontAwesome.otf
+|  |  |  ├── Vazir-Black.eot
+|  |  |  ├── Vazir-Black.ttf
+|  |  |  ├── Vazir-Black.woff
+|  |  |  ├── Vazir-Black.woff2
+|  |  |  ├── Vazir-Bold.eot
+|  |  |  ├── Vazir-Bold.ttf
+|  |  |  ├── Vazir-Bold.woff
+|  |  |  ├── Vazir-Bold.woff2
+|  |  |  ├── Vazir-Light.eot
+|  |  |  ├── Vazir-Light.ttf
+|  |  |  ├── Vazir-Light.woff
+|  |  |  ├── Vazir-Light.woff2
+|  |  |  ├── Vazir-Medium.eot
+|  |  |  ├── Vazir-Medium.ttf
+|  |  |  ├── Vazir-Medium.woff
+|  |  |  ├── Vazir-Medium.woff2
+|  |  |  ├── Vazir-Thin.eot
+|  |  |  ├── Vazir-Thin.ttf
+|  |  |  ├── Vazir-Thin.woff
+|  |  |  ├── Vazir-Thin.woff2
+|  |  |  ├── Vazir.eot
+|  |  |  ├── Vazir.ttf
+|  |  |  ├── Vazir.woff
+|  |  |  └── Vazir.woff2
+|  |  ├── images
+|  |  |  ├── AdminLTELogo.png
+|  |  |  ├── avatar.png
+|  |  |  ├── avatar04.png
+|  |  |  ├── avatar2.png
+|  |  |  ├── avatar3.png
+|  |  |  ├── avatar5.png
+|  |  |  ├── blue.png
+|  |  |  ├── blue@2x.png
+|  |  |  ├── boxed-bg.jpg
+|  |  |  ├── boxed-bg.png
+|  |  |  ├── credit
+|  |  |  ├── default-150x150.png
+|  |  |  ├── default_profile.png
+|  |  |  └── icons.png
+|  |  └── js
+|  |     ├── bootstrap.bundle.min.js
+|  |     ├── jquery-3.6.0.js
+|  |     ├── jquery.min.js
+|  |     └── login
+|  ├── components
+|  |  ├── auth
+|  |  |  ├── login
+|  |  |  ├── protect_routes
+|  |  |  └── register
+|  |  ├── panel
+|  |  |  ├── content_wrapper
+|  |  |  ├── control_aside
+|  |  |  ├── footer
+|  |  |  ├── navbar
+|  |  |  ├── notFound.tsx
+|  |  |  ├── panel.tsx
+|  |  |  └── sidebar
+|  |  └── test.tsx
+|  ├── index.tsx
+|  ├── ioc.react.tsx
+|  ├── ioc.tsx
+|  ├── models
+|  |  ├── bankCards.tsx
+|  |  ├── Photo.tsx
+|  |  └── User.tsx
+|  ├── react-app-env.d.ts
+|  ├── reportWebVitals.ts
+|  ├── service-worker.ts
+|  ├── services
+|  |  ├── alert_service.tsx
+|  |  ├── auth_service.tsx
+|  |  ├── http_service.tsx
+|  |  └── user_service.tsx
+|  ├── serviceWorkerRegistration.ts
+|  └── setupTests.ts
+└── tsconfig.json
+
+directory: 3690 file: 35998
+
+ignored: directory (126)

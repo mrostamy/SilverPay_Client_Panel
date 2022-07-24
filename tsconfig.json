@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+
     "target": "es5",
     "lib": [
       "dom",
@@ -7,6 +8,9 @@
       "esnext",
       "es6"
     ],
+    "noImplicitAny": true,
+    "noImplicitThis":true,
+    "strictNullChecks":true,
     "types": ["reflect-metadata","jquery"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

@@ -6,7 +6,7 @@ import "../../../assets/css/login/blue.css";
 // import "../../../assets/css/login/custom-style.css";
 
 import { Field, Form, Formik, useFormik } from "formik";
-import { AuthService } from "../../../services/auth_service";
+import { AuthService } from "../../../services/auth/auth_service";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 

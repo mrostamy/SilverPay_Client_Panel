@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik, getIn } from "formik"
 import { useNavigate } from "react-router-dom"
 import { toast } from "react-toastify";
-import { AuthService } from "../../../services/auth_service"
+import { AuthService } from "../../../services/auth/auth_service"
 import * as Yup from 'yup'
 
 const Register = () => {

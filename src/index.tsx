@@ -6,6 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import * as  $ from 'jquery';
 import { BrowserRouter } from 'react-router-dom';
 
+import './assets/fonts/OCR-A.ttf'
+
+import './index.css'
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
