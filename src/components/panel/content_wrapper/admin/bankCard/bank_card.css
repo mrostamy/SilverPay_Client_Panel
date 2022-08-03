@@ -1,6 +1,8 @@
 .card_number{
     font-family:'OCR-A';
     font-weight:bold;
-    font-size:30px;
-    color:red
+    font-size:20px;
+    background-color:bisque;
+    color:rgb(0, 0, 0);
+    direction: ltr;
 }

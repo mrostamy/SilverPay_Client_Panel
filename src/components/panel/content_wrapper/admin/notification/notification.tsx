@@ -3,7 +3,7 @@ import Info from "@mui/icons-material/Info"
 import { Form, Formik } from "formik";
 import { useEffect } from "react";
 import { useInjection } from "../../../../../ioc.react";
-import { NotificationService } from "../../../../../services/notification_sevice";
+import { NotificationService } from "../../../../../services/panel/user/notification_sevice";
 import { useJwt } from "react-jwt";
 
 const notification_service = useInjection(NotificationService);

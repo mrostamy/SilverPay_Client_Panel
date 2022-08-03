@@ -1,48 +1,30 @@
-import { Alert, AlertTitle, Button, Card, CardContent, CardHeader, Checkbox, FormControlLabel, FormGroup } from "@mui/material";
+import { Alert, AlertTitle, Button, createStyles, Dialog, InputAdornment, makeStyles, MenuItem, Modal, Select, TextField } from "@mui/material";
 import Info from "@mui/icons-material/Info"
 import { Form, Formik } from "formik";
-import { useEffect } from "react";
+import { useState } from "react";
 import { useInjection } from "../../../../../ioc.react";
-import { NotificationService } from "../../../../../services/notification_sevice";
+import { NotificationService } from "../../../../../services/panel/user/notification_sevice";
 import { useJwt } from "react-jwt";
-
+import AddCircle from '@mui/icons-material/AddCircle';
 
 import 'iransbankicon'
 
 import './bank_card.css'
+import { useStyles } from "./styleHook";
 
-const BankCard = () => {
+const BankCards = () => {
+
+  
+   // const classes=useStyles();
+
 
     const notification_service = useInjection(NotificationService);
 
     const decodedToken = useJwt(localStorage.getItem("token") || "");
 
     // let bankCard: BankCard;
+    const [open, setOpen] = useState(false);
 
-
-    useEffect(() => {
-
-        // loadNotifications("3");
-
-    }, [])
-
-    const loadNotifications = (id: string) => {
-
-
-        // notification_service.getNotification(id).then(response => {
-        //     notify = response;
-        //     console.log(response)
-        // })
-        //     .catch(error => { console.log(error) })
-
-    }
-
-    const updateNotify = () => {
-        // const initValues: Notification = {};
-        // notification_service.updateNotifications(decodedToken.userId, initValues).
-        //     then(response => { console.log(response) })
-        //     .catch(error => { console.log(error) })
-    }
 
     function goto() {
         $('html , body').animate({
@@ -52,40 +34,85 @@ const BankCard = () => {
 
     }
 
+    const handleClose = (event: any, reason: any) => {
+
+        if (reason === "backdropClick") {
+            return;
+        }
+
+        setOpen(false);
+
+    }
+    let age = "10"
     return (
 
+
         <>
-            <Formik initialValues={{}} onSubmit={updateNotify}>
-                {({ dirty }) =>
-                    <>
-                        <Alert variant="filled" icon={<Info />} severity="info">
-                            <AlertTitle>توجه</AlertTitle>
-                            <i className="bank64 bsi "  style={{borderRadius:"30px"}} />
-                            <p style={{fontSize:"14px"}}>بانک صادرات</p>
-                            <p className="card_number">6219-8216-4321-3007</p>
-                        </Alert>
-                        <Form>
-                            < Card >
-                                <CardHeader>
-                                    <div>
-                                        <h4>تمام کارت ها</h4>
-                                    </div>
-                                    <p>
-                                        تمام کارت های شما در این قسمت نمایش داده میشوند.
-                                    </p>
-                                </CardHeader>
-                                <CardContent>
+            <Alert variant="filled" icon={<Info />} severity="info">
+                <AlertTitle>توجه</AlertTitle>
 
-                                </CardContent>
-                            </Card>
+                <div>
+                    <h4>تمام کارت ها</h4>
+                </div>
+                <p>
+                    تمام کارت های شما در این قسمت نمایش داده میشوند.
+                </p>
+            </Alert>
+            <Button  variant="contained" color="success"
+             endIcon={<AddCircle sx={{marginRight:"10px"}} />} onClick={() => { setOpen(true) }}>افزودن کارت بانکی</Button>
+            <Dialog open={open} onClose={handleClose} >
+                <Formik initialValues={{}} onSubmit={() => { }}>
+                    {({ dirty }) =>
+                        <>
+                            <Form>
+                                <Select
+                                    value={age}
+                                    onChange={() => { }}
+                                    label="نام بانک"
+                                >
+                                    <MenuItem value={"bsi"}>بانک صادرات</MenuItem>
+                                    <MenuItem value={"sepah"}>بانک سپه</MenuItem>
+                                    <MenuItem value={"bmi"}>بانک ملی ایران</MenuItem>
+                                    <MenuItem value={"mellat"}>بانک ملت</MenuItem>
+                                    <MenuItem value={"tejarat"}>بانک تجارت</MenuItem>
+                                    <MenuItem value={"bki"}>بانک کشاورزی</MenuItem>
+                                    <MenuItem value={"persian"}>بانک پارسیان</MenuItem>
+                                    <MenuItem value={"maskan"}>بانک مسکن</MenuItem>
+                                    <MenuItem value={"en"}>بانک اقتصاد نوین</MenuItem>
+                                    <MenuItem value={"bsi"}>بانک سامان</MenuItem>
+                                    <MenuItem value={"bpi"}>بانک پاسارگاد</MenuItem>
+                                    <MenuItem value={"ansar"}>بانک انصار</MenuItem>
+                                    <MenuItem value={"ba"}>بانک آینده</MenuItem>
+                                    <MenuItem value={"shahr"}>بانک شهر</MenuItem>
+                                    <MenuItem value={"tt"}>بانک توسعه تعاون</MenuItem>
+                                    <MenuItem value={"ghbi"}>بانک قوامین</MenuItem>
+                                    <MenuItem value={"rb"}>بانک رفاه کارگران</MenuItem>
+                                    <MenuItem value={"day"}>بانک دی</MenuItem>
 
-                            <Button id="btnId" type="submit" disabled={!dirty} name="submit">update</Button>
-                        </Form>
-                    </>
-                }
-            </Formik>
+                                </Select><br />
+                                <TextField variant="standard" label="شماره حساب " /><br />
+                                <TextField variant="standard" label="نام صاحب حساب" /><br />
+                                <TextField variant="standard" label="شماره شبا" style={{ direction: "ltr" }}
+                                    InputProps={{
+                                        startAdornment: <InputAdornment position="start">IR</InputAdornment>,
+                                    }}
+                                /><br />
+                                <TextField variant="standard" label="شماره کارت" />
+                                <p>
+                                    <TextField ml-15 variant="standard" label="تاریخ انقضاء/ ماه" />
+                                    <TextField variant="standard" label="تاریخ انقضاء / سال " />
+
+                                </p>
+                                <Button id="btnId" type="submit" disabled={!dirty} name="submit">ذخیره کارت بانکی</Button>
+                                <Button onClick={() => setOpen(false)} >انصراف</Button>
+                            </Form>
+                        </>
+                    }
+                </Formik>
+            </Dialog>
+
         </>
     )
 }
 
-export default BankCard;
+export default BankCards;

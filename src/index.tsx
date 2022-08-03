@@ -5,10 +5,11 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import * as  $ from 'jquery';
 import { BrowserRouter } from 'react-router-dom';
-
-import './assets/fonts/OCR-A.ttf'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import './index.css'
+
+
 
 
 const root = ReactDOM.createRoot(
@@ -18,7 +19,7 @@ root.render(
 
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+        <App />
     </BrowserRouter>
 
   </React.StrictMode>
@@ -32,4 +33,6 @@ serviceWorkerRegistration.register();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+// reportWebVitals();

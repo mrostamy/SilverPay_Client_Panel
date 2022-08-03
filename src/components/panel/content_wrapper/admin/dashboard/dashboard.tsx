@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { AuthService } from "../../../../../services/auth/auth_service";
 import BankCard from "../bankCard/bankCard";
 
-const Dashboard = () => {
+const Dashboard = (props: any) => {
 
     const nav = useNavigate();
 
@@ -23,6 +23,7 @@ const Dashboard = () => {
     return (
         <>
             <h1>Dashbord</h1>
+            <h1>{props.data.title}</h1>
             {authService.isLogin() ? <p>user is logged in</p> : null}
             {myDecodedToken ? <p>{myDecodedToken.sub}</p> : null}
             <button onClick={logoutHandler}>logout</button>
