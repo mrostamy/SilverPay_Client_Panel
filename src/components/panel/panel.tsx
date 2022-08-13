@@ -11,6 +11,14 @@ import { User_list } from "./content_wrapper/admin/usersList/users_list"
 import ManageBankCard from "./content_wrapper/admin/bankCard/manage_bank_card"
 import Document from "./content_wrapper/admin/document/manage_document"
 import Wallet from "./content_wrapper/admin/wallet/wallet"
+import Manage_Wallet from "./content_wrapper/admin/wallet/manage_wallets"
+import Ticket from "./content_wrapper/admin/ticket/ticket"
+import TicketList from "./content_wrapper/admin/ticket/ticket_list"
+import GateManageMent from "./content_wrapper/admin/gate/gate_management"
+import GateEdit from "./content_wrapper/admin/gate/gate_edit"
+import EasyPayManagement from "./content_wrapper/admin/easyPay/easy_pay_management"
+import EasyPayAdd from "./content_wrapper/admin/easyPay/easyPay_add"
+import EasyPayEdit from "./content_wrapper/admin/easyPay/easyPay_edit"
 
 const Panel = () => {
     return (
@@ -18,7 +26,7 @@ const Panel = () => {
             <div className="wrapper">
                 <Navbar />
                 <MainSideBar />
-                <Routes>
+                <Routes >
                     <Route path="/" element={<Wrapper />}>
                         <Route index element={<Navigate to="/panel/dashboard" replace />} />
                         <Route path="dashboard" element={<Dashboard data={{ title: "jsjsjs" }} />} />
@@ -33,7 +41,13 @@ const Panel = () => {
                         <Route path="admin/users/usersmanagement" element={<User_list role="admin" />} />
                         <Route path="bankcards" element={<ManageBankCard />} />
                         <Route path="document" element={<Document />} />
-                        <Route path="wallet" element={<Wallet />} />
+                        <Route path="wallet" element={<Manage_Wallet />} />
+                        <Route path="ticket" element={<TicketList />} />
+                        <Route path="gate" element={<GateManageMent />} />
+                        <Route path="gate/edit/:gateId" element={<GateEdit />} />
+                        <Route path="easypay" element={<EasyPayManagement />} />
+                        <Route path="easypay/add" element={<EasyPayAdd />} />
+                        <Route path="easypay/edit/:easyPayId" element={<EasyPayEdit />} />
                     </Route>
                     <Route path="*" element={<NotFound />} />
                 </Routes>

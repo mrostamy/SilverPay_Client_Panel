@@ -40,7 +40,7 @@ function App() {
 
     console.log("use effect in app component")
 
-    loadScript("./src/assets/js/alert.js")
+    loadScript("./assets/js/alert.js")
 
 
 

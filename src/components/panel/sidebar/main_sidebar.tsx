@@ -70,6 +70,12 @@ export const MainSideBar = () => {
                                         </li>
                                         <li className="nav-item">
                                             <Link to="/panel/admin/document" className="nav-link">
+                                                <i className="nav-icon fa fa-comment" />
+                                                <p>تنظیمات اطلاع رسانی</p>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to="/panel/admin/document" className="nav-link">
                                                 <i className="nav-icon fa fa-book" />
                                                 <p>مدارک</p>
                                             </Link>
@@ -80,52 +86,72 @@ export const MainSideBar = () => {
                                                 <p>کیف پول</p>
                                             </Link>
                                         </li>
+                                        <li className="nav-item">
+                                            <Link to="/panel/admin/ticket" className="nav-link">
+                                                <i className="nav-icon fa fa-wallet" />
+                                                <p>پشتیبانی</p>
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </li>
-                                {/* //#endregion */}
-
                                 <li className="nav-item has-treeview menu-open">
                                     <a href="#" className="nav-link ">
                                         <i className="nav-icon fa fa-info" />
                                         <p>
-                                            اطلاعات شما
+                                            بلاگ
+                                            <i className="right fa fa-angle-left" />
+                                        </p>
+                                    </a>
+                                    {/* #region test */}
+                                    <ul className="nav nav-treeview">
+                                        <li className="nav-item">
+                                            <Link to={"/panel/blog/blogGroup"} className="nav-link ">
+                                                <i className="nav-icon fa fa-user" />
+                                                <p>مدریت دسته بندی بلاگ</p>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to="/panel/blog/blogManagement" className="nav-link">
+                                                <i className="nav-icon fa fa-comment" />
+                                                <p> مدریت بلاگ</p>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                    {/* #endregion */}
+                                </li>
+                                <li className="nav-item has-treeview menu-open">
+                                    <a href="#" className="nav-link ">
+                                        <i className="nav-icon fa fa-info" />
+                                        <p>
+                                            مدریت درگاه پرداخت
                                             <i className="right fa fa-angle-left" />
                                         </p>
                                     </a>
                                     <ul className="nav nav-treeview">
                                         <li className="nav-item">
-                                            <a href="#" className="nav-link ">
-                                                <i className="nav-icon fa fa-user" />
-                                                <p>پروفایل</p>
-                                            </a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a href="#" className="nav-link">
-                                                <i className="nav-icon fa fa-book" />
-                                                <p>مدارک</p>
-                                            </a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a href="#" className="nav-link">
-                                                <i className="nav-icon fa fa-book" />
-                                                <p>تنظیمات اطلاع رسانی</p>
-                                            </a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a href="#" className="nav-link">
-                                                <i className="nav-icon fa fa-book" />
-                                                <p>کارت های بانکی</p>
-                                            </a>
+                                            <Link to="/panel/admin/gate" className="nav-link">
+                                                <i className="nav-icon fa fa-list-alt" />
+                                                <p>درگاه های پرداخت</p>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
-                                        <i className="nav-icon fa fa-user" />
+                                <li className="nav-item has-treeview menu-open">
+                                    <a href="#" className="nav-link ">
+                                        <i className="nav-icon fa fa-info" />
                                         <p>
-                                            پروفایل
+                                            مدریت آسان پرداخت
+                                            <i className="right fa fa-link" />
                                         </p>
                                     </a>
+                                    <ul className="nav nav-treeview">
+                                        <li className="nav-item">
+                                            <Link to="/panel/admin/easypay" className="nav-link">
+                                                <i className="nav-icon fa fa-wallet" />
+                                                <p>درگاه های پرداخت</p>
+                                            </Link>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </nav>

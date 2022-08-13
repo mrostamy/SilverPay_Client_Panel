@@ -3,3 +3,10 @@
     src: local('OCR-A') 
     , url('./assets/fonts/OCR-A\ Regular.ttf') format("truetype");
 }
+
+
+
+.addIcon{
+    margin-left:10px;
+    color:rgb(189, 233, 33)
+}

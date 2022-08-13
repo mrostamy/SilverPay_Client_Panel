@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export const Navbar = () => {
     return (
@@ -21,7 +22,7 @@ export const Navbar = () => {
                 </li>
             </ul>
             {/* SEARCH FORM */}
-            <form className="form-inline ml-3">
+            {/* <form className="form-inline ml-3">
                 <div className="input-group input-group-sm">
                     <input
                         className="form-control form-control-navbar"
@@ -35,13 +36,13 @@ export const Navbar = () => {
                         </button>
                     </div>
                 </div>
-            </form>
+            </form> */}
             {/* Right navbar links */}
             <ul className="navbar-nav mr-auto">
                 {/* Messages Dropdown Menu */}
                 <li className="nav-item dropdown">
                     <a className="nav-link" data-toggle="dropdown" href="#">
-                        <i className="fa fa-comments-o" />
+                        <i className="fa fa-bell-o" />
                         <span className="badge badge-danger navbar-badge">3</span>
                     </a>
                     <div className="dropdown-menu dropdown-menu-lg dropdown-menu-left">
@@ -124,31 +125,22 @@ export const Navbar = () => {
                 </li>
                 {/* Notifications Dropdown Menu */}
                 <li className="nav-item dropdown">
-                    <a className="nav-link" data-toggle="dropdown" href="#">
-                        <i className="fa fa-bell-o" />
-                        <span className="badge badge-warning navbar-badge">15</span>
+                    <a style={{ borderLeft: "1px solid green", borderRight: "1px solid green", borderRadius: "12px" }} className="nav-link btn btn-success" data-toggle="dropdown" href="#">
+                        <i className="fa fa-fire" />
+                        <span className="badge badge-warning navbar-badge">دسترسی سریع</span>
                     </a>
                     <div className="dropdown-menu dropdown-menu-lg dropdown-menu-left">
-                        <span className="dropdown-item dropdown-header">15 نوتیفیکیشن</span>
+                        <Link to={"/panel/admin/wallet"} className="dropdown-item">
+                            <i className="fa fa-envelope ml-2" /> کیف پول
+                        </Link>
                         <div className="dropdown-divider" />
-                        <a href="#" className="dropdown-item">
-                            <i className="fa fa-envelope ml-2" /> 4 پیام جدید
-                            <span className="float-left text-muted text-sm">3 دقیقه</span>
-                        </a>
+                        <Link to={"/panel/admin/gate"} className="dropdown-item">
+                            <i className="fa fa-users ml-2" /> درگاه پرداخت
+                        </Link>
                         <div className="dropdown-divider" />
-                        <a href="#" className="dropdown-item">
-                            <i className="fa fa-users ml-2" /> 8 درخواست دوستی
-                            <span className="float-left text-muted text-sm">12 ساعت</span>
-                        </a>
-                        <div className="dropdown-divider" />
-                        <a href="#" className="dropdown-item">
-                            <i className="fa fa-file ml-2" /> 3 گزارش جدید
-                            <span className="float-left text-muted text-sm">2 روز</span>
-                        </a>
-                        <div className="dropdown-divider" />
-                        <a href="#" className="dropdown-item dropdown-footer">
-                            مشاهده همه نوتیفیکیشن
-                        </a>
+                        <Link to={"/panel/admin/wallet"} className="dropdown-item">
+                            <i className="fa fa-file ml-2" /> افزایش موجودی
+                        </Link>
                     </div>
                 </li>
                 <li className="nav-item">
