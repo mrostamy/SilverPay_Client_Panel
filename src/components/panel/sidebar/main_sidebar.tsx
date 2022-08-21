@@ -153,6 +153,35 @@ export const MainSideBar = () => {
                                         </li>
                                     </ul>
                                 </li>
+                                <li className="nav-item has-treeview menu-open">
+                                    <a href="#" className="nav-link ">
+                                        <i className="nav-icon fa fa-info" />
+                                        <p>
+                                            مدریت موجودی
+                                            <i className="right fa fa-link" />
+                                        </p>
+                                    </a>
+                                    <ul className="nav nav-treeview">
+                                        <li className="nav-item">
+                                            <Link to="/panel/admin/easypay" className="nav-link">
+                                                <i className="nav-icon fa fa-wallet" />
+                                                <p> فاکتورها </p>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to="/panel/accountant/reportFactors" className="nav-link">
+                                                <i className="nav-icon fa fa-wallet" />
+                                                <p> گزارش فاکتورها </p>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to="/panel/admin/easypay" className="nav-link">
+                                                <i className="nav-icon fa fa-wallet" />
+                                                <p> مدریت فاکتورها </p>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                         {/* /.sidebar-menu */}

@@ -8,6 +8,7 @@
       "esnext",
       "es6"
     ],
+    "strictPropertyInitialization": false,//add with me
     "noImplicitAny": true,
     "noImplicitThis":true,
     "strictNullChecks":true,

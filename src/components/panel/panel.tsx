@@ -10,15 +10,25 @@ import { NotFound } from "./notFound"
 import { User_list } from "./content_wrapper/admin/usersList/users_list"
 import ManageBankCard from "./content_wrapper/admin/bankCard/manage_bank_card"
 import Document from "./content_wrapper/admin/document/manage_document"
-import Wallet from "./content_wrapper/admin/wallet/wallet"
 import Manage_Wallet from "./content_wrapper/admin/wallet/manage_wallets"
-import Ticket from "./content_wrapper/admin/ticket/ticket"
 import TicketList from "./content_wrapper/admin/ticket/ticket_list"
 import GateManageMent from "./content_wrapper/admin/gate/gate_management"
 import GateEdit from "./content_wrapper/admin/gate/gate_edit"
 import EasyPayManagement from "./content_wrapper/admin/easyPay/easy_pay_management"
 import EasyPayAdd from "./content_wrapper/admin/easyPay/easyPay_add"
 import EasyPayEdit from "./content_wrapper/admin/easyPay/easyPay_edit"
+import BlogGroupManageMent from "./content_wrapper/blog/blog_group_management/blog_group_management"
+import BlogGroupAdd from "./content_wrapper/blog/blog_group_management/blog_group_add"
+import BlogGroupEdit from "./content_wrapper/blog/blog_group_management/blog_group_edit"
+import BlogManageMent from "./content_wrapper/blog/blog-management/blog_manage"
+import BlogEdit from "./content_wrapper/blog/blog-management/blog_edit"
+import BlogAdd from "./content_wrapper/blog/blog-management/blog_add"
+import AccountantDashboard from "./content_wrapper/accountant/dashboard/accountant_dashboard"
+import AccountantInventory from "./content_wrapper/accountant/accountant-financial/accountantInventory/accountant_inventories"
+import InventoryWalletList from "./content_wrapper/accountant/accountant-financial/accountantInventory/inventory_wallets_list"
+import InventoryBankCardList from "./content_wrapper/accountant/accountant-financial/accountantInventory/inventory_bankCard_list"
+import Entry from "./content_wrapper/accountant/accountant-entries/accountant_entry"
+import EntryAdd from "./content_wrapper/accountant/accountant-entries/accountant_entry_add"
 
 const Panel = () => {
     return (
@@ -48,6 +58,28 @@ const Panel = () => {
                         <Route path="easypay" element={<EasyPayManagement />} />
                         <Route path="easypay/add" element={<EasyPayAdd />} />
                         <Route path="easypay/edit/:easyPayId" element={<EasyPayEdit />} />
+                    </Route>
+                    <Route path="blog">
+                        <Route index element={<Navigate to="blogGroup" />} />
+                        <Route path="blogGroup" element={<BlogGroupManageMent />} />
+                        <Route path="blogGroup/add" element={<BlogGroupAdd />} />
+                        <Route path="blogGroup/edit/:blogGroupId" element={<BlogGroupEdit />} />
+                        <Route path="blog" element={<BlogManageMent />} />
+                        <Route path="blogGroup/add" element={<BlogAdd />} />
+                        <Route path="blogGroup/edit/:blogGroupId" element={<BlogEdit />} />
+                    </Route>
+                    <Route path="accountant">
+                        <Route index element={<Navigate to="dashboard" />} />
+                        <Route path="dashboard" element={<AccountantDashboard />} />
+                        <Route path="inventory" element={<AccountantInventory />} />
+                        <Route path="inventoryWallet:userId" element={<InventoryWalletList />} />
+                        <Route path="inventoryBankCard:userId" element={<InventoryBankCardList />} />
+                        <Route path="entry" element={<Entry />} />
+                       <Route path="entry/add" element={<EntryAdd />} />
+                       <Route path="entry/approve" element={<EntryAdd />} />
+                       <Route path="entry/payed" element={<EntryAdd />} />
+                       <Route path="entry/archive" element={<EntryAdd />} />
+                       {/* <Route path="blogGroup/edit/:blogGroupId" element={<BlogEdit />} /> */} 
                     </Route>
                     <Route path="*" element={<NotFound />} />
                 </Routes>

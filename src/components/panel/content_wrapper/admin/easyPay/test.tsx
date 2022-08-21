@@ -19,11 +19,19 @@ export class Test extends React.Component {
                 [1, 2, 4, 8, 6, -2, -1, -4, -6, -2]
             ]
         };
-
+        var options = {
+            high: 10,
+            low: -10,
+            axisX: {
+              labelInterpolationFnc: function(value:any, index:any) {
+                return index % 2 === 0 ? value : null;
+              }
+            }
+          };
 
         return (
             <>
-                <ChartistGraph type="Bar" data={data} />
+                <ChartistGraph type="Bar" data={data} options={options}  />
             </>
         )
 
