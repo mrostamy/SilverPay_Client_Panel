@@ -1,5 +1,5 @@
 import axios from "axios";
-import User from "../../../models/User";
+import User from "../../../data/models/User";
 import { injectable } from "inversify";
 
 

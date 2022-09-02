@@ -23,4 +23,8 @@ export default interface Document {
 
     nationalCode: String
 
+    userId?: String
+
+    userName?: String
+
 }

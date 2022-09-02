@@ -182,6 +182,36 @@ export const MainSideBar = () => {
                                         </li>
                                     </ul>
                                 </li>
+
+
+                                <li className="nav-item has-treeview menu-open">
+                                    <a href="#" className="nav-link ">
+                                        <i className="nav-icon fa fa-info" />
+                                        <p>
+                                            مدریت مالی
+                                            <i className="right fa fa-angle-left" />
+                                        </p>
+                                    </a>
+                                    <ul className="nav nav-treeview">
+                                        <li className="nav-item">
+                                            <Link to="/panel/admin/gate" className="nav-link">
+                                                <i className="nav-icon fa fa-list-alt" />
+                                                <p>درگاه ها</p>
+                                            </Link>
+                                        </li>
+                                        <ul className="nav nav-treeview">
+                                            <li className="nav-item">
+                                                <Link to="/panel/admin/gate" className="nav-link">
+                                                    <i className="nav-icon fa fa-list-alt" />
+                                                    <p>درگاهاس کیف پول </p>
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </li>
+
+
+
                             </ul>
                         </nav>
                         {/* /.sidebar-menu */}

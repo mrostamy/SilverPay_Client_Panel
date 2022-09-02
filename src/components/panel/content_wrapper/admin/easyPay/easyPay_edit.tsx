@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react'
-import easyPay from '../../../../../models/easyPay'
+import easyPay from '../../../../../data/models/easyPay'
 import * as yup from 'yup'
 import { useInjection } from '../../../../../ioc.react'
 import { EasyPayService } from '../../../../../services/panel/user/easy_pay_service'

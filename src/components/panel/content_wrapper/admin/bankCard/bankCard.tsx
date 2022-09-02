@@ -9,13 +9,17 @@ import AddCircle from '@mui/icons-material/AddCircle';
 
 import 'iransbankicon'
 
+import { finc } from '../../../../../assets/js/alert.js'
+
 import './bank_card.css'
 import { useStyles } from "./styleHook";
+import { Helmet } from "react-helmet-async";
+import { env } from "process";
 
 const BankCards = () => {
 
-  
-   // const classes=useStyles();
+
+    // const classes=useStyles();
 
 
     const notification_service = useInjection(NotificationService);
@@ -27,6 +31,7 @@ const BankCards = () => {
 
 
     function goto() {
+
         $('html , body').animate({
             scrollTop: $("#btnId").offset()!.top - 20
 
@@ -45,21 +50,8 @@ const BankCards = () => {
     }
     let age = "10"
     return (
-
-
         <>
-            <Alert variant="filled" icon={<Info />} severity="info">
-                <AlertTitle>توجه</AlertTitle>
 
-                <div>
-                    <h4>تمام کارت ها</h4>
-                </div>
-                <p>
-                    تمام کارت های شما در این قسمت نمایش داده میشوند.
-                </p>
-            </Alert>
-            <Button  variant="contained" color="success"
-             endIcon={<AddCircle sx={{marginRight:"10px"}} />} onClick={() => { setOpen(true) }}>افزودن کارت بانکی</Button>
             <Dialog open={open} onClose={handleClose} >
                 <Formik initialValues={{}} onSubmit={() => { }}>
                     {({ dirty }) =>

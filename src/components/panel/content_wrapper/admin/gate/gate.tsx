@@ -1,10 +1,10 @@
 import { Button, IconButton, Menu, MenuItem } from "@mui/material";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useState } from "react";
-import { gate_wallets } from "../../../../../models/gateWallets";
+import { gate_wallets } from "../../../../../data/models/gateWallets";
 import GateActive from "./gate_active";
-import { gate } from "../../../../../models/gate";
-import wallet from "../../../../../models/wallet";
+import { gate } from "../../../../../data/models/gate";
+import wallet from "../../../../../data/models/wallet";
 const Gate = () => {
 
     const [exit, setExit] = useState(false)

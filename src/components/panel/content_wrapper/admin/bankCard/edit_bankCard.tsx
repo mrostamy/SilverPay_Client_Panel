@@ -3,7 +3,7 @@ import { Form, Formik } from "formik"
 import { useEffect, useRef, useState } from "react"
 import * as Yup from 'yup'
 import { useInjection } from "../../../../../ioc.react"
-import BankCard from "../../../../../models/bankCards"
+import BankCard from "../../../../../data/models/bankCards"
 import { AlertService } from "../../../../../services/alert_service"
 import { BankCardService } from "../../../../../services/panel/user/bankCard_service"
 

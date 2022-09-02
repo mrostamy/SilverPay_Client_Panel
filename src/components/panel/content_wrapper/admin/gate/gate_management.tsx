@@ -2,7 +2,7 @@ import AddCircle from "@mui/icons-material/AddCircle";
 import { Button } from "@mui/material";
 import { useEffect } from "react";
 import { useInjection } from "../../../../../ioc.react";
-import { gates_wallets } from "../../../../../models/gates_wallets";
+import { gates_wallets } from "../../../../../data/models/gates_wallets";
 import { AlertService } from "../../../../../services/alert_service";
 import { GateService } from "../../../../../services/panel/gate_service";
 import Gate from "./gate";

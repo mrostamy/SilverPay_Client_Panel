@@ -5,7 +5,7 @@ import { GateService } from "../../../../../services/panel/gate_service";
 import { DataGrid, GridColDef, GridRowsProp, faIR } from '@mui/x-data-grid';
 import { Button, IconButton } from "@mui/material";
 import { EasyPayService } from "../../../../../services/panel/user/easy_pay_service";
-import { gates_wallets } from "../../../../../models/gates_wallets";
+import { gates_wallets } from "../../../../../data/models/gates_wallets";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Swal from 'sweetalert2'

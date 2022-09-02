@@ -9,7 +9,7 @@
       "es6"
     ],
     "strictPropertyInitialization": false,//add with me
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis":true,
     "strictNullChecks":true,
     "types": ["reflect-metadata","jquery"],

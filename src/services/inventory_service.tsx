@@ -1,9 +1,9 @@
 
 import axios from "axios";
 import { injectable } from "inversify";
-import BankCard from "../models/bankCards";
-import { inventory } from "../models/inventory";
-import wallet from "../models/wallet";
+import BankCard from "../data/models/bankCards";
+import { inventory } from "../data/models/inventory";
+import wallet from "../data/models/wallet";
 
 
 

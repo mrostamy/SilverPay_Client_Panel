@@ -1,3 +1,6 @@
-alert('skskssk')
 
-console.log("message from alert js")
+alert("test")
+
+export const finc=()=>{
+    alert("test")
+}

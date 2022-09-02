@@ -29,6 +29,16 @@ import InventoryWalletList from "./content_wrapper/accountant/accountant-financi
 import InventoryBankCardList from "./content_wrapper/accountant/accountant-financial/accountantInventory/inventory_bankCard_list"
 import Entry from "./content_wrapper/accountant/accountant-entries/accountant_entry"
 import EntryAdd from "./content_wrapper/accountant/accountant-entries/accountant_entry_add"
+import BankCardEntry from "./content_wrapper/accountant/accountant-financial/accountant_bankcards/BankCardEntry"
+import WalletEntry from "./content_wrapper/accountant/accountant-financial/accountant_wallets/accountant_wallet_entry"
+import ManageFactors from "./content_wrapper/accountant/accountantFactors/manage_factors"
+import FactorEdit from "./content_wrapper/accountant/accountantFactors/factor_edit"
+import GateFactors from "./content_wrapper/accountant/accountant-financial/gates/gate_factors"
+import Gate from "./content_wrapper/admin/gate/gate"
+import Gates from "./content_wrapper/accountant/accountant-financial/gates/gates"
+import WalletGates from "./content_wrapper/accountant/accountant-financial/accountant_wallets/wallet_gates"
+import UserGateFactors from "../../services/panel/user/userGate_factors"
+import UserGateFactorDetail from "./content_wrapper/user/user_gate_factor_detail"
 
 const Panel = () => {
     return (
@@ -72,14 +82,25 @@ const Panel = () => {
                         <Route index element={<Navigate to="dashboard" />} />
                         <Route path="dashboard" element={<AccountantDashboard />} />
                         <Route path="inventory" element={<AccountantInventory />} />
-                        <Route path="inventoryWallet:userId" element={<InventoryWalletList />} />
-                        <Route path="inventoryBankCard:userId" element={<InventoryBankCardList />} />
+                        <Route path="inventory/:userId/Wallets" element={<InventoryWalletList />} />
+                        <Route path="inventory/:userId/BankCards" element={<InventoryBankCardList />} />
                         <Route path="entry" element={<Entry />} />
-                       <Route path="entry/add" element={<EntryAdd />} />
-                       <Route path="entry/approve" element={<EntryAdd />} />
-                       <Route path="entry/payed" element={<EntryAdd />} />
-                       <Route path="entry/archive" element={<EntryAdd />} />
-                       {/* <Route path="blogGroup/edit/:blogGroupId" element={<BlogEdit />} /> */} 
+                        <Route path="entry/add" element={<EntryAdd />} />
+                        <Route path="entry/approve" element={<EntryAdd />} />
+                        <Route path="entry/payed" element={<EntryAdd />} />
+                        <Route path="entry/archive" element={<EntryAdd />} />
+                        <Route path="entryEdit/:entryId" element={<EntryAdd />} />
+                        <Route path="bankcards/:bankcardId/entry" element={<BankCardEntry />} />
+                        <Route path="wallets/:walletId/entry" element={<WalletEntry />} />
+                        <Route path="wallets/:walletId/factors" element={<ManageFactors />} />
+                        <Route path="wallets/:walletId/gates" element={<WalletGates />} />
+                        <Route path="gates/:gateId/factors" element={<GateFactors />} />
+                        <Route path="gate/:gateId/factors" element={<UserGateFactors />} />
+                        <Route path="gate/factors/:foctorId" element={<UserGateFactorDetail />} />
+                        <Route path="gates" element={<Gates />} />
+                        <Route path="foctors" element={<ManageFactors />} />
+                        <Route path="foctors" element={<ManageFactors />} />
+                        <Route path="foctors/:factorId/detail" element={<FactorEdit />} />
                     </Route>
                     <Route path="*" element={<NotFound />} />
                 </Routes>

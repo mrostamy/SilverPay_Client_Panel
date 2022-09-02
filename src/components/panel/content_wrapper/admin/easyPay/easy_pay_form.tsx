@@ -11,8 +11,8 @@ import EasyPayList from "./easy_pay_list";
 import styles from "./easy_pay_management.module.css"
 import { Form, Formik } from "formik";
 import { EasyPayService } from "../../../../../services/panel/user/easy_pay_service";
-import easyPay from "../../../../../models/easyPay";
-import { gates_wallets } from "../../../../../models/gates_wallets";
+import easyPay from "../../../../../data/models/easyPay";
+import { gates_wallets } from "../../../../../data/models/gates_wallets";
 
 const EasyPayForm = () => {
 

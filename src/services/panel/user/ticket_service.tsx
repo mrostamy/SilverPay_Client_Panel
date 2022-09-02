@@ -1,7 +1,7 @@
 
 import { injectable } from "inversify";
 import { isExpired, useJwt } from "react-jwt";
-import { ticket } from "../../../models/ticket";
+import { ticket } from "../../../data/models/ticket";
 import axios from "../../http_service";
 
 

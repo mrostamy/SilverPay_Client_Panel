@@ -1,7 +1,7 @@
 
 import { injectable } from "inversify";
 import { isExpired, useJwt } from "react-jwt";
-import BankCard from "../../../models/bankCards";
+import BankCard from "../../../data/models/bankCards";
 import axios from "../../http_service";
 
 

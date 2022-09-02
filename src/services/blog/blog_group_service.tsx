@@ -1,6 +1,6 @@
 import axios from "axios";
 import { injectable } from "inversify";
-import { blogGroup } from "../../models/blog_group";
+import { blogGroup } from "../../data/models/blog_group";
 
 @injectable()
 export class BlogGroupService {

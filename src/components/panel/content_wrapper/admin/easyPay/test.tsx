@@ -1,5 +1,4 @@
 import React from "react";
-import ChartistGraph from "react-chartist";
 
 export class Test extends React.Component {
 
@@ -9,9 +8,7 @@ export class Test extends React.Component {
         super(props)
     }
 
-
     render() {
-
 
         var data = {
             labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10'],
@@ -19,6 +16,7 @@ export class Test extends React.Component {
                 [1, 2, 4, 8, 6, -2, -1, -4, -6, -2]
             ]
         };
+        
         var options = {
             high: 10,
             low: -10,
@@ -31,7 +29,6 @@ export class Test extends React.Component {
 
         return (
             <>
-                <ChartistGraph type="Bar" data={data} options={options}  />
             </>
         )
 

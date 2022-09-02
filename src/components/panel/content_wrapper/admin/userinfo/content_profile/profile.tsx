@@ -1,6 +1,6 @@
 import { useInjection } from '../../../../../../ioc.react';
 import { UserService } from "../../../../../../services/panel/user/user_service";
-import User from "../../../../../../models/User";
+import User from "../../../../../../data/models/User";
 import { AlertService } from '../../../../../../services/alert_service';
 import { AuthService } from '../../../../../../services/auth/auth_service';
 import { toast } from 'react-toastify';

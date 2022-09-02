@@ -2,11 +2,11 @@ import { TextField } from "@mui/material";
 import { Form, Formik, FormikProps, FormikValues } from "formik";
 import { useRef } from "react";
 import { useInjection } from "../../../../../ioc.react";
-import wallet from "../../../../../models/wallet";
+import wallet from "../../../../../data/models/wallet";
 import { AlertService } from "../../../../../services/alert_service";
 import { GateService } from "../../../../../services/panel/gate_service";
 import * as yup from 'yup'
-import { gate_active_direct } from "../../../../../models/gate_active_direct";
+import { gate_active_direct } from "../../../../../data/models/gate_active_direct";
 
 const GateActive = () => {
 

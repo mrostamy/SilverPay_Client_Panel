@@ -11,8 +11,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import './assets/css/adminlte.min.css';
 import './assets/css/custom-style.css';
 import './assets/css/bootstrap-rtl.min.css';
-import { Console } from "console";
+
+
 import { Backdrop, CircularProgress } from "@mui/material";
+import { HelmetProvider } from "react-helmet-async";
 
 const Login = React.lazy(() => import('./components/auth/login/login'));
 
@@ -21,28 +23,10 @@ const Register = React.lazy(() => import('./components/auth/register/register'))
 const Panel = React.lazy(() => import('./components/panel/panel'));
 
 
+export default function App() {
 
-
-function App() {
-
-  const loadScript = (src: string) => {
-
-    const script = document.createElement("script");
-    script.src = src;
-    script.type = "text/script";
-    script.async = true;
-    script.onload = () => { console.log('ssksks') }
-    document.body.appendChild(script);
-  }
 
   useEffect(() => {
-
-
-    console.log("use effect in app component")
-
-    loadScript("./assets/js/alert.js")
-
-
 
   }, [])
 
@@ -53,16 +37,18 @@ function App() {
       <Provider container={container}>
         <ToastContainer />
         <Suspense fallback={<Backdrop open={true}><CircularProgress color="inherit" /></Backdrop>}>
-          <Routes>
-            <Route path='/' element={<Navigate to="/panel" />} />
-            <Route path='/test' element={<Test3 />} />
-            <Route path='/panel/*' element={<Panel />} />
-            <Route path='/auth'>
-              <Route index element={<Navigate to={"/auth/login"} />} />
-              <Route path='login' element={<Login />} />
-              <Route path='register' element={<Register />} />
-            </Route>
-          </Routes>
+          <HelmetProvider>
+            <Routes>
+              <Route path='/' element={<Navigate to="/panel" />} />
+              <Route path='/test' element={<Test3 />} />
+              <Route path='/panel/*' element={<Panel />} />
+              <Route path='/auth'>
+                <Route index element={<Navigate to={"/auth/login"} />} />
+                <Route path='login' element={<Login />} />
+                <Route path='register' element={<Register />} />
+              </Route>
+            </Routes>
+          </HelmetProvider>
         </Suspense>
       </Provider>
 
@@ -70,5 +56,3 @@ function App() {
 
   );
 }
-
-export default App;

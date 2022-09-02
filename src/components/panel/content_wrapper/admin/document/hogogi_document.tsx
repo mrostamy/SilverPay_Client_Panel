@@ -6,7 +6,7 @@ import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import styles from "./document.module.css"
 
 import * as Yup from 'yup'
-import Document from '../../../../../models/document';
+import Document from '../../../../../data/models/document';
 import { ErrorMessage, Form, Formik } from 'formik';
 import { useInjection } from '../../../../../ioc.react';
 import { DocumentService } from '../../../../../services/panel/user/document_service';

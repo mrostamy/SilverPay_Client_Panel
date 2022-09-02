@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useJwt } from "react-jwt";
 import { useInjection } from "../../../../../ioc.react"
-import Document from "../../../../../models/document";
+import Document from "../../../../../data/models/document";
 import { DocumentService } from "../../../../../services/panel/user/document_service"
 
 

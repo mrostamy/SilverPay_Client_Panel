@@ -1,7 +1,8 @@
 
 import axios from 'axios';
 import { injectable } from 'inversify'
-import { entry } from '../../models/accountant/entry';
+import { entry } from '../../data/models/accountant/entry';
+import { entryUpdate } from '../../data/models/accountant/entryUpdate';
 
 @injectable()
 export class EntrySerivce {
@@ -64,13 +65,32 @@ export class EntrySerivce {
 
     }
 
-    public updateEntry(entryId: string, textForUser: string) {
+    public updateEntry(entryId: string, entryUpdate: any) {
 
         // make paginate
         return axios
-            .patch(this.base_url, { textForUser })
+            .patch(this.base_url, entryUpdate)
 
     }
 
+    public getBankCardEntries(bankcardId:string,entryId: string, entryUpdate: any) {
 
+        
+
+        // make paginate
+        return axios
+            .patch(this.base_url, entryUpdate)
+
+    }
+    public getWalletEntries(wallet: string, entryId: string, entryUpdate: any) {
+
+
+
+        // make paginate
+        return axios
+            .patch(this.base_url, entryUpdate)
+
+    }
+
+}
 }

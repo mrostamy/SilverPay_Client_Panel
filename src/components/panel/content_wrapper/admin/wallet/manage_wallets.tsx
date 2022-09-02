@@ -1,6 +1,6 @@
 import AddCircle from "@mui/icons-material/AddCircle";
 import { Button, Card, CardContent, Dialog, Modal } from "@mui/material";
-import wallet from "../../../../../models/wallet";
+import wallet from "../../../../../data/models/wallet";
 import Wallet from "./wallet";
 import WalletForm from "./wallet_form";
 

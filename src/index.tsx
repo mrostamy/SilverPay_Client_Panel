@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
-import * as  $ from 'jquery';
 import { BrowserRouter } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import store from './redux/store/store';
+import { Provider } from 'react-redux'
 
 import './index.css'
 
@@ -19,7 +18,11 @@ root.render(
 
   <React.StrictMode>
     <BrowserRouter>
+    <Provider store={store}>
+
         <App />
+      </Provider>
+
     </BrowserRouter>
 
   </React.StrictMode>

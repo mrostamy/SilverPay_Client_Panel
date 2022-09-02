@@ -1,8 +1,8 @@
 
 import { injectable } from "inversify";
 import { isExpired, useJwt } from "react-jwt";
-import easyPay from "../../../models/easyPay";
-import { easyPayGatesWallets } from "../../../models/easyPayGatesWallets";
+import easyPay from "../../../data/models/easyPay";
+import { easyPayGatesWallets } from "../../../data/models/easyPayGatesWallets";
 import axios from "../../http_service";
 
 @injectable()

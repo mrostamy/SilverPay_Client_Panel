@@ -1,7 +1,7 @@
 import { Checkbox, FormControlLabel } from "@mui/material"
 import { useInjection } from "../../../../../ioc.react"
-import { blog } from "../../../../../models/blog"
-import { pagination } from "../../../../../models/pagination"
+import { blog } from "../../../../../data/models/blog"
+import { pagination } from "../../../../../data/models/pagination"
 import { BlogService } from "../../../../../services/blog/blog_service "
 
 export default function BlogList() {

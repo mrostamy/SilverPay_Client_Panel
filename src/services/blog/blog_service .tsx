@@ -1,7 +1,7 @@
 import axios from "axios";
 import { injectable } from "inversify";
-import { blog } from "../../models/blog";
-import { PaginationResult } from "../../models/pagination";
+import { blog } from "../../data/models/blog";
+import { PaginationResult } from "../../data/models/pagination";
 
 @injectable()
 export class BlogService {

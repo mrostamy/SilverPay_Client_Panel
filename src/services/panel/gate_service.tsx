@@ -1,8 +1,8 @@
 import axios from "axios";
 import { injectable } from "inversify";
-import { gate } from "../../models/gate";
-import { gates_wallets } from "../../models/gates_wallets";
-import { gate_wallets } from "../../models/gateWallets";
+import { gate } from "../../data/models/gate";
+import { gates_wallets } from "../../data/models/gates_wallets";
+import { gate_wallets } from "../../data/models/gateWallets";
 
 
 @injectable()
@@ -38,6 +38,24 @@ export class GateService {
     activeGate = (userId: string,gateId:string,active:any): Promise<gate> => {
 
         return axios.put(this.base_url + "users/" + userId + "/gates/" + gateId+"/active/",active)
+    }
+
+
+
+
+    changeIpGate = (gateId: string, flag: any): Promise<gate> => {
+
+        return axios.put(this.base_url + "/financial/" + "/gates/" + gateId + "/ipGate/", {flag})
+    }
+
+    changeActiveGate = (gateId: string, flag: any): Promise<gate> => {
+
+        return axios.put(this.base_url + "/financial/" + "/gates/" + gateId + "/active/", { flag })
+    }
+
+    changeDirectGate = (gateId: string, flag : any): Promise<gate> => {
+
+        return axios.put(this.base_url + "/financial/" + "/gates/" + gateId + "/active/", { flag })
     }
 
 }
